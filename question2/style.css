@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+}
+
+#container {
+  /*position: absolute;*/
+  width: calc(100%);
+  height: calc(100% - 150px);
+  pointer-events: none;
+  /*margin: 20px;*/
+  /*border: 1px solid red;*/
+}
+
+div.controls{
+	/*border: 1px solid orange;*/
+	height: 120px;
+	overflow: hidden;
+	width: 100%;
+	max-width: 600px;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+div.controls div.details, div.controls div.inputs{
+	float: left;
+	width: 50%;
+
+}
+div.controls div.inputs div.input{
+	display: block;
+	height: 50%;
+	width: 100%;
+	text-align: right;
+	margin-bottom: 15px;
+}
+
+label{
+	display: block;
+	font-weight: bold;
+}
+input{
+	position: relative;
+	top: 3px;
+}
+output{
+	width: 40px;
+	display: inline-block;
+}
+
+div.controls div.details span{
+	font-weight: bold;
+}
+div.controls div.details p:first-of-type{
+	margin-top: 0px;
+}
+
+span.color-description{
+	color: #3498db;
+}

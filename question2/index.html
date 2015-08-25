@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+	<link rel="stylesheet" href="style.css"/>
+	<script src='sigma.min.js'></script>
+	<script src='sigma.plugins.neighborhoods.js'></script>
+	
+
+</head>
+
+
+<body>
+	<div id="container"></div>
+
+	<div class="controls">
+		<div class="details">
+
+			<p><span class="color-description">Colored subgraph</span> is the largest component</p>
+			<p>Number of Nodes: <span id="nValue">2asd25</span></p>
+			<p>Percolation Threshold = 1/N  ~ <span id="pThreshold">.2asd3</span></p>
+			<p>Nodes in largest component: <span id="componentPercent"></span>%</p>
+
+		</div>
+
+		<div class="inputs">
+
+			<div class="input">
+				<label>Connection Probability, p</label>
+				<input type="range" id="pRange" min="0" value="0" max=".02" step="0.001" oninput="updateP(value)">
+				<output for="fader" id="pValue">.0</output>
+			</div>
+
+			<div class="input">
+				<label>Number of Nodes, N</label>
+				<input type="range" id="nRange" min="2" value="7" max="12" step="1" oninput="updateN(value)"> 
+				<output for="fader" id="nRangeValue">7</output>
+			</div>
+
+		</div>
+		
+	</div>
+
+	<script src='main.js'></script>
+	
+</body>
+
+</html>

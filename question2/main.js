@@ -42,15 +42,14 @@ function findLargestComponentNodes(){
 	componentPercent = largestComponent.length/N; //Set componentPercent
 
 	return largestComponent; //return array nodeIDs contained in the largest component
-	
-};
+}
 
 function colorNodes(nodes){
 	//For each node in the array passed in, set its color.
 	for(var kk = 0; kk < nodes.length; kk++){
 		s.graph.nodes(nodes[kk]).color = '#3498db'; 
 	}
-};
+}
 
 
 function addNodes(){
@@ -64,7 +63,7 @@ function addNodes(){
 			color: '#ccc'
 		});
 	}
-};
+}
 
 
 function addEdges(p){
@@ -83,7 +82,7 @@ function addEdges(p){
 			}			
 		}
 	}
-};
+}
 
 
 function updateP(p) {
@@ -99,7 +98,7 @@ function updateP(p) {
 	colorNodes(largestComponent)
 	s.refresh();
 	drawDetails();
-};
+}
 
 function updateN(newN) {
 	// Handle when the N slider is changed. 
@@ -116,7 +115,7 @@ function updateN(newN) {
 	addNodes();
 	s.refresh();
 	drawDetails();
-};
+}
 
 function drawDetails(){
 	// Update all the DOM elements that need to be bound to local variables
@@ -130,7 +129,7 @@ function drawDetails(){
 	document.getElementById('pRange').step = pStep;
 	document.getElementById('pThreshold').innerHTML = Math.floor(pThreshold*1000)/1000;
 	document.getElementById('componentPercent').innerHTML = Math.floor(componentPercent*100);
-};
+}
 
 
 function dfs(g, startNode){
@@ -167,5 +166,5 @@ function dfs(g, startNode){
 
 	}
 	return nodesInComponent;
-};
+}
 
